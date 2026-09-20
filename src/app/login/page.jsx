@@ -20,6 +20,16 @@ const handleLogin = async () => {
   }
   router.push("/");
 };
+
+const handleGoogleLogin = async () => {
+  const { data, error } = await authClient.signIn.social({
+    provider: "google",
+    callbackURL: "/",
+  });
+
+  console.log(data);
+  console.log(error);
+};
   return (
     <main>
       <h1>Login</h1>
@@ -45,6 +55,9 @@ const handleLogin = async () => {
       <button  onClick={handleLogin}>
         Login
       </button>
+      <button onClick={handleGoogleLogin}>
+  Continue with Google
+</button>
     </main>
   )
 }

@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A young shepherd follows his dreams and discovers the meaning of life.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A practical guide to writing clean, readable, and maintainable software.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An introduction to the universe, space, time, and modern physics.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=500"
+  },
+
+  {
+  "id": 4,
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "description": "A classic story about wealth, dreams, love, and the American society of the 1920s.",
+  "category": "Story",
+  "available_quantity": 6,
+  "image_url": "https://images.unsplash.com/photo-1511108690759-009324a90311?w=500"
+},
+{
+  "id": 5,
+  "title": "Atomic Habits",
+  "author": "James Clear",
+  "description": "A practical guide to building good habits and breaking bad ones.",
+  "category": "Story",
+  "available_quantity": 5,
+  "image_url": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500"
+},
+{
+  "id": 6,
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "description": "Bilbo Baggins goes on an unexpected adventure filled with danger and discovery.",
+  "category": "Story",
+  "available_quantity": 4,
+  "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
+},
+{
+  "id": 7,
+  "title": "JavaScript: The Good Parts",
+  "author": "Douglas Crockford",
+  "description": "An introduction to the powerful and useful features of JavaScript.",
+  "category": "Tech",
+  "available_quantity": 7,
+  "image_url": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=500"
+},
+{
+  "id": 8,
+  "title": "You Don't Know JS",
+  "author": "Kyle Simpson",
+  "description": "A deeper exploration of JavaScript concepts and programming techniques.",
+  "category": "Tech",
+  "available_quantity": 3,
+  "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500"
+},
+{
+  "id": 9,
+  "title": "Design Patterns",
+  "author": "Erich Gamma",
+  "description": "A guide to reusable solutions for common object-oriented software design problems.",
+  "category": "Tech",
+  "available_quantity": 2,
+  "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500"
+},
+{
+  "id": 10,
+  "title": "Cosmos",
+  "author": "Carl Sagan",
+  "description": "A fascinating journey through space, science, and the history of the universe.",
+  "category": "Science",
+  "available_quantity": 5,
+  "image_url": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=500"
+},
+{
+  "id": 11,
+  "title": "The Selfish Gene",
+  "author": "Richard Dawkins",
+  "description": "An exploration of evolution and natural selection from the perspective of genes.",
+  "category": "Science",
+  "available_quantity": 4,
+  "image_url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500"
+},
+{
+  "id": 12,
+  "title": "Astrophysics for People in a Hurry",
+  "author": "Neil deGrasse Tyson",
+  "description": "A simple introduction to the major ideas of astrophysics and the universe.",
+  "category": "Science",
+  "available_quantity": 6,
+  "image_url": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=500"
+}
+]

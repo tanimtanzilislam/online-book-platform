@@ -2,7 +2,13 @@
 
 import books from "@/data/books.json";
 import Link from "next/link"
+import { useState } from "react";
 export default function BooksPage() {
+
+   const [search, setSearch] = useState("");
+   const filteredBooks = books.filter((book) =>
+  book.title.toLowerCase().includes(search.toLowerCase())
+);
 
 
      return (
@@ -12,9 +18,11 @@ export default function BooksPage() {
             <input
   type="text"
   placeholder="Search books by title..."
+   value={search}
+    onChange={(e) => setSearch(e.target.value)}
   className="input input-bordered w-full max-w-md mb-8"
 />
-    {books.map((book) => (
+    {filteredBooks.map((book) => (
  <div
   key={book.id}
   className="card bg-base-100 shadow-md"

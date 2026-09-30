@@ -1,18 +1,31 @@
 "use client";
 
-import books from "@/data/books.json";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function BooksPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  const [bookState, setBookState] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch("/api/books")
+      .then((res) => res.json())
+      .then((data) => setBookState(data))
+      .catch((error) => {
+        console.log(error);
+  setLoading(false);
+      });
+  }, []);
 
-  const filteredBooks = books.filter(
+  const filteredBooks = bookState.filter(
     (book) =>
       book.title.toLowerCase().includes(search.toLowerCase()) &&
       (category === "All" || book.category === category)
   );
+if (loading) {
+  return <p className="text-center py-20">Loading books...</p>;
+}
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-10">

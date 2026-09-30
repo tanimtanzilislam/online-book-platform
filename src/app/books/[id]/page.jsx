@@ -1,8 +1,24 @@
-import books from "@/data/books.json";
 
+import BorrowButton from "@/components/BorrowButton";
+
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 export default async function BookDetails({ params }) {
 
 const { id } = await params;
+const res = await fetch(
+  `${process.env.BETTER_AUTH_URL}/api/books`,
+  { cache: "no-store" }
+);
+
+const books = await res.json();
+const session = await auth.api.getSession({
+  headers: await headers(),
+});
+if (!session) {
+  redirect("/login");
+}
  const book = books.find((item) => item.id === Number(id));
  if (!book) {
   return (
@@ -42,9 +58,10 @@ const { id } = await params;
             </span>
           </p>
 
-          <button className="btn btn-primary mt-6">
-            Borrow
-          </button>
+<BorrowButton
+  bookId={book.id}
+  disabled={book.available_quantity === 0}
+/>
         </div>
 
       </div>

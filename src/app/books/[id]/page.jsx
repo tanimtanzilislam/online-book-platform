@@ -1,5 +1,6 @@
 
 import BorrowButton from "@/components/BorrowButton";
+import Image from "next/image";
 
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
@@ -32,10 +33,14 @@ if (!session) {
     <main className="max-w-7xl mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <img
+        <Image
           src={book.image_url}
           alt={book.title}
-          className="w-full h-[500px] object-cover rounded-lg"
+          width={800}
+          height={1200}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="w-full h-125 object-cover rounded-lg"
+          unoptimized
         />
 
         <div>
@@ -60,6 +65,7 @@ if (!session) {
 
 <BorrowButton
   bookId={book.id}
+   bookTitle={book.title}
   disabled={book.available_quantity === 0}
 />
         </div>
